@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const WeatherCards = ({weather, temperature})=> {
   const [isCelsius, setIsCelsius] = useState(true)
@@ -23,9 +24,10 @@ const changeTemperature = () => setIsCelsius(!isCelsius)
         </ul>
       </section>
       <h2 className='card__temperature'>
-        {isCelsius? `${temperature?.celsius} °C` : `${temperature?.farenheit} °F`}
+       Temperature: {isCelsius? `${temperature?.celsius} °C` : `${temperature?.farenheit} °F`}
       </h2>
       <button className='card__btn' onClick = {changeTemperature}>{isCelsius ? 'Change to °F' : 'Change to °C'}</button>
+      <Link to='/' className='card__btn'>Regresar</Link>
     </article>
   )
 }
