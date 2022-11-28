@@ -10,7 +10,7 @@ const Home = () => {
     <div className='card__home'>
       
       <Clock/>
-      <h1 className='card__title-home'>WHEADER APP</h1>
+      <h1 className='card__title-home'>WEATHER APP</h1>
 
       <div className='card__icons'>
             <img className='icons' src="/src/images/sol.gif" alt="" />
